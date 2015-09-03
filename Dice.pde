@@ -5,6 +5,9 @@ void setup()
 void draw()
 {
 	//your code here
+	background(255, 255, 255);
+	dice= new Die(150,150);
+	dice.show();
 }
 void mousePressed()
 {
@@ -23,6 +26,6 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		//your code here
+		rect(x,y,50,50);//your code here
 	}
 }
