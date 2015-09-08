@@ -22,15 +22,17 @@ public void setup()
 public void draw()
 {
 	//your code here
-	background(255, 255, 255);
-	Die dice= new Die(150,150);
-	dice.show();
-	
+	background(0, 0, 0);
+	for (int i=0; i<500; i+=50){
+	Die dic= new Die(i,i);
+	dic.show();
+	dic.roll();
+	}	
 }
 public void mousePressed()
 {
 	redraw();
-	dice.roll();
+	
 }
 class Die //models one single dice cube
 {
@@ -45,10 +47,52 @@ class Die //models one single dice cube
 	public void roll()
 	{
 		if(dot == 1){
-			ellipse(myX-20,myY-20,5,5);
+			stroke((int)(Math.random()*255),(int)(Math.random()*255), (int)(Math.random()*255));
+			ellipse(myX+25,myY+25,5,5);
 
 		}
-		//your code here
+		if(dot == 2){
+			stroke((int)(Math.random()*255),(int)(Math.random()*255), (int)(Math.random()*255));
+			ellipse(myX+20,myY+25,5,5);
+			ellipse(myX+30,myY+25,5,5);
+
+		}
+		if(dot == 3){
+			stroke((int)(Math.random()*255),(int)(Math.random()*255), (int)(Math.random()*255));
+			ellipse(myX+15,myY+25,5,5);
+			ellipse(myX+25,myY+25,5,5);
+			ellipse(myX+35,myY+25,5,5);
+
+		}
+		if(dot == 4){
+			stroke((int)(Math.random()*255),(int)(Math.random()*255), (int)(Math.random()*255));
+			ellipse(myX+32,myY+18,5,5);
+			ellipse(myX+18,myY+18,5,5);
+			ellipse(myX+32,myY+32,5,5);
+			ellipse(myX+18,myY+32,5,5);
+
+		}
+		if(dot == 5){
+			stroke((int)(Math.random()*255),(int)(Math.random()*255), (int)(Math.random()*255));
+			ellipse(myX+25,myY+25,5,5);
+			ellipse(myX+32,myY+18,5,5);
+			ellipse(myX+18,myY+18,5,5);
+			ellipse(myX+32,myY+32,5,5);
+			ellipse(myX+18,myY+32,5,5);
+
+
+		}
+		if(dot == 6){
+			stroke((int)(Math.random()*255),(int)(Math.random()*255), (int)(Math.random()*255));
+			ellipse(myX+15,myY+20,5,5);
+			ellipse(myX+25,myY+20,5,5);
+			ellipse(myX+35,myY+20,5,5);
+			ellipse(myX+15,myY+30,5,5);
+			ellipse(myX+25,myY+30,5,5);
+			ellipse(myX+35,myY+30,5,5);
+
+
+		}
 	}
 	public void show()
 	{
