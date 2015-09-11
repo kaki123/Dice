@@ -10,25 +10,25 @@ void draw()
 	int sum = 0;
 	int first=0;
 	int total = 0;
-	List myList = new ArrayList();
+	//List myList = new ArrayList();
 	for (int i=0; i<500; i+=100){
 		for (int x=0; x<500; x+=65){
 			Die dic= new Die(x,i);
 			dic.show();
 			dic.roll();
 			sum = sum + dic.dot;
-			myList.add(sum); 
+			//myList.add(sum); 
 
 		}
 	}
 	//total= sum of list 
-	for(i=0; i<myList.length;i++){
-		 total+= myList.get(i);
+	//for(i=0; i<myList.length;i++){
+		// total+= myList.get(i);
 
-	}
-	return total;
+	//}
+	//return total;
 	
-	text("Total:"+ sum + "" + total, 0,520);
+	text("Total:"+ sum, 0,520);
 }
 void mousePressed()
 {
